@@ -5,6 +5,8 @@ import locale
 import time
 import os
 
+from art import *
+
 locale.setlocale(locale.LC_TIME, 'vi_VN.UTF-8')
 
 
@@ -28,10 +30,10 @@ while True:
     d = datetime.datetime.now()
     dday = replace_vn_chars(d.strftime("%A"))
     ddate = d.strftime("%x")
-    dtime = d.strftime("%I:%M %p")
+    dtime = d.strftime("%I:%M:%S %p")
 
-    print(dday)
-    print(ddate)
-    print(dtime)
+    tprint(dday.upper(), font="tarty1")
+    tprint(ddate, font="tarty1")
+    tprint(dtime, font="tarty1")
 
     time.sleep(1)
