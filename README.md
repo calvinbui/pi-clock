@@ -8,6 +8,12 @@ https://github.com/adafruit/Raspberry-Pi-Installer-Scripts
 sudo python3 adafruit-pitft.py --display=35r --rotation=270 --install-type=console
 ```
 
+## Install dependencies
+
+```bash
+sudo pip3 install -r requirements.txt
+```
+
 ## Autostart
 
 Edit `/etc/rc.local` and add `/home/pi/pi-clock/main.py > /dev/tty1` before the `exit 0`.
